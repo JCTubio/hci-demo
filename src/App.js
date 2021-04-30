@@ -1,10 +1,13 @@
 import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+
+import SideBar from './components/SideBar'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      <SideBar />
+      <div className="main">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           This is the home page for our <i>future</i> healthy app
@@ -12,7 +15,7 @@ function App() {
         <p>
           Coming soon.
         </p>
-      </header>
+      </div>
     </div>
   );
 }
