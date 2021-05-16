@@ -1,28 +1,30 @@
 import React from 'react'
-import './App.scss'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 import Home from './containers/home'
 import Calorie from './containers/calorie'
 
 import SideBar from './components/SideBar'
 
+import './App.scss'
+
 function App() {
-
-  const router = () => {
-    switch (window.location.pathname) {
-      case '/home':
-        return <Home />
-      case '/calories':
-        return <Calorie />
-      default:
-        return <Home />
-    }
-  }
-
   return (
     <div className='App'>
-      <SideBar />
-      {router()}
+      <Router>
+        <SideBar />
+        <Switch>
+          <Route exact path='/home'>
+            <Home />
+          </Route>
+          <Route exact path='/calories'>
+            <Calorie />
+          </Route>
+          <Route path='/'>
+            <Home />
+          </Route>
+        </Switch>
+      </Router>
     </div>
   )
 }

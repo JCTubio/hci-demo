@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Redirect } from 'react-router-dom'
 
 import backgroundImg from '../../images/background.jpg'
 import orangeImg from '../../images/orange.png'
@@ -7,12 +8,12 @@ import './styles.scss'
 
 const Home = () => {
   const [showModal, setShowModal] = useState(false)
+  const [shouldRedirect, setShouldRedirect] = useState(false)
 
   const handleScan = () => {
     setShowModal(true)
     setTimeout(() => {
-      setShowModal(false)
-      window.location.href = 'calories'
+      setShouldRedirect(true)
     }, 1820)
   }
 
@@ -28,6 +29,7 @@ const Home = () => {
           <div className='modal-content'>
             <img src={orangeImg} alt='orange' />
             <div className='scanning' />
+            {shouldRedirect ? <Redirect to='/calories' /> : null}
           </div>
         </div>
       ) : null}

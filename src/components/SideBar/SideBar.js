@@ -1,4 +1,7 @@
 import React from 'react'
+import {
+  Link,
+} from "react-router-dom";
 
 import profileImage from '../../images/profile.jpg'
 
@@ -11,10 +14,10 @@ const SideBar = () => {
         <img className="profile-img" src={profileImage} alt="profile" />
       </div>
       <div className="links">
-        <a className="link" href='/calories' >Calories</a>
-        <a className="link" href='/ingredients' >Ingredients</a>
-        <a className="link" href='/meals' >Meals</a>
-        <a className="link" href='/goals' >Goals</a>
+        <Link className="link" to='/calories' >Calories</Link>
+        <Link className="link" to='/ingredients' >Ingredients</Link>
+        <Link className="link" to='/meals' >Meals</Link>
+        <Link className="link" to='/goals' >Goals</Link>
       </div>
     </div>
   )
