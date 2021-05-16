@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import './App.scss'
 
 import Home from './containers/home'
@@ -7,7 +7,6 @@ import Calorie from './containers/calorie'
 import SideBar from './components/SideBar'
 
 function App() {
-  console.log(window.location.pathname)
 
   const router = () => {
     switch (window.location.pathname) {
