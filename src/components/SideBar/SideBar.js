@@ -14,6 +14,7 @@ const SideBar = () => {
         <img className="profile-img" src={profileImage} alt="profile" />
       </div>
       <div className="links">
+        <Link className="link" to='/home' >Home</Link>
         <Link className="link" to='/calories' >Calories</Link>
         <Link className="link" to='/ingredients' >Ingredients</Link>
         <Link className="link" to='/meals' >Meals</Link>
