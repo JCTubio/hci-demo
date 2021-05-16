@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.scss';
+import React, { useEffect } from 'react'
+import './App.scss'
+
+import Home from './containers/home'
+import Calorie from './containers/calorie'
 
 import SideBar from './components/SideBar'
 
 function App() {
+  console.log(window.location.pathname)
+
+  const router = () => {
+    switch (window.location.pathname) {
+      case '/home':
+        return <Home />
+      case '/calories':
+        return <Calorie />
+      default:
+        return <Home />
+    }
+  }
+
   return (
-    <div className="App">
+    <div className='App'>
       <SideBar />
-      <div className="main">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          This is the home page for our <i>future</i> healthy app
-        </p>
-        <p>
-          Coming soon.
-        </p>
-      </div>
+      {router()}
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

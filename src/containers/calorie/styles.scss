@@ -1,0 +1,119 @@
+
+.background {
+  width: 100%;
+  padding: 0;
+  padding-left: 50px;
+  padding-right: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+}
+
+.background-img {
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  width: 100%;
+  bottom: 100%;
+  position: absolute;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  
+  .menu {
+    
+    width: 350px;
+    margin-right: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    
+    .row {
+      width: 95%;
+      display: flex;
+      border-bottom: 1px solid black;
+      padding-top: 20px;
+      cursor: pointer;
+
+      .text {
+        width: 80%;
+        font-size: 16px;
+        text-align: left;
+        margin-left: 16px;
+        margin-bottom: 6px;
+
+        &.selected {
+          font-weight: bold;
+        }
+      }
+      .button {
+        font-size: 16px;
+        font-weight: bold;
+        width: 20%;
+        background-color: rgba(0,0,0,0);
+        border: 0;
+        cursor: pointer;
+        margin-right: 25px;
+
+        &.selected {
+          font-weight: bold;
+        }
+      }
+      
+      &.selected {
+        background-color: rgb(180, 180, 180);
+      }
+    }
+  }
+
+  .food {
+    width: 300px;
+    margin-right: 50px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      object-fit: contain;
+      border-radius: 10px;
+    }
+
+    .food-calories-count {
+      font-size: 16px;
+      font-weight: bold;
+    }
+  }
+
+  .nutritional-table {
+    border-radius: 10px;
+    background-color: white;
+    padding: 10px;
+    width: 200px;
+
+    .title {
+      margin: 0;
+      margin-left: 12px;
+      font-size: 20px;
+      border-bottom: solid black 1px;
+      text-align: left;
+      margin-bottom: 10px;
+    }
+    .row {
+      margin: 0;
+      margin-left: 12px;
+      margin-bottom: 4px;
+      font-size: 16px;
+      text-align: left;
+
+    }
+  }
+}

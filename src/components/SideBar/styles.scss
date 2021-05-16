@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: stretch;
   width: 20vw;
-  height: 100%;
+  background-color: white;
 
   .img-container {
     width: 100%;
@@ -13,6 +13,7 @@
 
     .profile-img {
       width: 100%;
+      height: 100%;
       object-fit: cover;
     }
   }
@@ -29,6 +30,13 @@
       font-size: 26px;
       font-family: Verdana, Geneva, Tahoma, sans-serif;
       color: rgb(025, 025, 025);
+      margin-top: 6px;
+      margin-bottom: 6px;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 }
