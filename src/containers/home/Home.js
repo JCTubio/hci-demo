@@ -13,8 +13,13 @@ const Home = () => {
   const handleScan = () => {
     setShowModal(true)
     setTimeout(() => {
-      setShouldRedirect(true)
+      setShouldRedirect('/calories')
     }, 1820)
+  }
+
+  const handleCalorieTracker = () => {
+    setShouldRedirect('/logbook')
+    setShowModal(true)
   }
 
   return (
@@ -23,13 +28,13 @@ const Home = () => {
       <button className='round-button' onClick={handleScan}>
         SCAN
       </button>
-      <button className='round-button'>Quick calorie tracker</button>
+      <button className='round-button' onClick={handleCalorieTracker}>Quick calorie tracker</button>
       {showModal ? (
         <div className='modal'>
           <div className='modal-content'>
             <img src={orangeImg} alt='orange' />
             <div className='scanning' />
-            {shouldRedirect ? <Redirect to='/calories' /> : null}
+            {shouldRedirect ? <Redirect to={shouldRedirect} /> : null}
           </div>
         </div>
       ) : null}

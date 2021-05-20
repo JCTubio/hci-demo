@@ -18,6 +18,7 @@ const SideBar = () => {
         <Link className="link" to='/calories' >Calories</Link>
         <Link className="link" to='/ingredients' >Ingredients</Link>
         <Link className="link" to='/meals' >Meals</Link>
+        <Link className="link" to='/logbook' >Log</Link>
         <Link className="link" to='/goals' >Goals</Link>
       </div>
     </div>

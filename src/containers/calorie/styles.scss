@@ -26,54 +26,10 @@
 .content {
   display: flex;
   flex-direction: row;
-  
-  .menu {
-    
+
+  .meals-container {
     width: 350px;
     margin-right: 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: white;
-    border-radius: 10px;
-    padding: 10px;
-    
-    .row {
-      width: 95%;
-      display: flex;
-      border-bottom: 1px solid black;
-      padding-top: 20px;
-      cursor: pointer;
-
-      .text {
-        width: 80%;
-        font-size: 16px;
-        text-align: left;
-        margin-left: 16px;
-        margin-bottom: 6px;
-
-        &.selected {
-          font-weight: bold;
-        }
-      }
-      .button {
-        font-size: 16px;
-        font-weight: bold;
-        width: 20%;
-        background-color: rgba(0,0,0,0);
-        border: 0;
-        cursor: pointer;
-        margin-right: 25px;
-
-        &.selected {
-          font-weight: bold;
-        }
-      }
-      
-      &.selected {
-        background-color: rgb(180, 180, 180);
-      }
-    }
   }
 
   .food {

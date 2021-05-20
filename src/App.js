@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 import Home from './containers/home'
 import Calorie from './containers/calorie'
+import Logbook from './containers/logbook'
 
 import SideBar from './components/SideBar'
 
@@ -19,6 +20,9 @@ function App() {
           </Route>
           <Route exact path='/calories'>
             <Calorie />
+          </Route>
+          <Route exact path='/logbook'>
+            <Logbook />
           </Route>
           <Route path='/'>
             <Home />

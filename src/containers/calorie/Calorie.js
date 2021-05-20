@@ -1,4 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
+
+import CaloriesDetails from '../../components/CaloriesDetails/CaloriesDetails'
 
 import orangeImg from '../../images/orange.png'
 import backgroundImg from '../../images/background.jpg'
@@ -6,31 +8,19 @@ import backgroundImg from '../../images/background.jpg'
 import './styles.scss'
 
 const Calorie = () => {
+  const [meals, setMeals] = useState({})
+
+  const handleClick = (meal) => {
+    const mealsCopy = Object.assign({}, meals, meal)
+    setMeals(mealsCopy)
+  }
+
   return (
     <div className='background'>
       <img className='background-img' src={backgroundImg} alt='background' />
       <div className='content'>
-        <div className='menu'>
-          <div className='row'>
-            <p className='text'>Breakfast</p>
-            <button className='button'>345 calories</button>
-          </div>
-          <div className='row selected'>
-            <p className='text selected'>Snack</p>
-            <button className='button selected'>+</button>
-          </div>
-          <div className='row'>
-            <p className='text'>Lunch</p>
-            <button className='button'>+</button>
-          </div>
-          <div className='row'>
-            <p className='text'>Snack</p>
-            <button className='button'>+</button>
-          </div>
-          <div className='row'>
-            <p className='text'>Dinner</p>
-            <button className='button'>+</button>
-          </div>
+        <div className='meals-container'>
+          <CaloriesDetails meals={meals} handleClick={handleClick} />
         </div>
 
         <div className='food'>
@@ -40,7 +30,7 @@ const Calorie = () => {
 
         <div className='nutritional-table'>
           <p className='title'>Orange</p>
-          <p className='row'>Calories: 47</p>
+          <p className='row'>Calories: 345</p>
           <p className='row'>Water: 87%</p>
           <p className='row'>Protein: 0.9g</p>
           <p className='row'>Carbs: 11.8g</p>
