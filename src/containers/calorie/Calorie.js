@@ -25,7 +25,7 @@ const Calorie = () => {
 
         <div className='food'>
           <img src={orangeImg} alt='scanned food' />
-          <p className='food-calories-count'>62 calories</p>
+          <p className='food-calories-count'>345 calories</p>
         </div>
 
         <div className='nutritional-table'>
