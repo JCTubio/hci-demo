@@ -8,4 +8,7 @@
   align-items: stretch;
   text-align: center;
   min-height: 800px;
+  background: rgb(184,219,241);
+  background: linear-gradient(180deg, rgba(184,219,241,1) 50%, rgba(255,133,109,0.6253851882549895) 100%);
+  overflow: hidden;
 }

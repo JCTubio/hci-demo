@@ -3,7 +3,6 @@ import React, { useState } from 'react'
 import CaloriesDetails from '../../components/CaloriesDetails/CaloriesDetails'
 
 import orangeImg from '../../images/orange.png'
-import backgroundImg from '../../images/background.jpg'
 
 import './styles.scss'
 
@@ -17,7 +16,6 @@ const Calorie = () => {
 
   return (
     <div className='background'>
-      <img className='background-img' src={backgroundImg} alt='background' />
       <div className='content'>
         <div className='meals-container'>
           <CaloriesDetails meals={meals} handleClick={handleClick} />

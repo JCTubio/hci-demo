@@ -5,8 +5,6 @@ import CaloriesDetails from '../../components/CaloriesDetails/CaloriesDetails'
 
 import { daysOfTheWeek } from '../../constants/Moment.js'
 
-import backgroundImg from '../../images/background.jpg'
-
 import 'react-calendar/dist/Calendar.css'
 import './styles.scss'
 
@@ -23,7 +21,6 @@ const Logbook = () => {
   console.log(value)
   return (
     <div className='container'>
-      <img className='background-img' src={backgroundImg} alt='background' />
       <div className='calendar-container'>
         <Calendar onChange={onChange} value={value} />
       </div>

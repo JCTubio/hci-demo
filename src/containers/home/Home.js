@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 import { Redirect } from 'react-router-dom'
 
-import backgroundImg from '../../images/background.jpg'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCamera, faCalendarAlt } from '@fortawesome/free-solid-svg-icons'
+
 import orangeImg from '../../images/orange.png'
 
 import './styles.scss'
@@ -24,11 +26,13 @@ const Home = () => {
 
   return (
     <div className='background'>
-      <img className='background-img' src={backgroundImg} alt='background' />
       <button className='round-button' onClick={handleScan}>
         SCAN
+        <FontAwesomeIcon style={{marginTop: '15px'}} size='2x' icon={faCamera} />
       </button>
-      <button className='round-button' onClick={handleCalorieTracker}>Quick calorie tracker</button>
+      <button className='round-button' onClick={handleCalorieTracker}>
+        Quick calorie tracker <FontAwesomeIcon style={{marginTop: '15px'}} size='2x' icon={faCalendarAlt} />
+      </button>
       {showModal ? (
         <div className='modal'>
           <div className='modal-content'>
